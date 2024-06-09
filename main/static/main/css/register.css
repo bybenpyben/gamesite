@@ -1,0 +1,182 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* Отключаем прокрутку */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    position: fixed; /* Зафиксировать заголовок в верхней части */
+    top: 0; /* Привязать к верхней части экрана */
+    left: 0; /* Привязать к левой части экрана */
+    z-index: 1000; /* Сделать так, чтобы заголовок всегда был на переднем плане */
+}
+
+.auth-background {
+    background: url('/static/main/img/background-login.png') no-repeat center center fixed; /* Заглушка для фона */
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px; /* Отступ сверху, чтобы содержимое не перекрывалось заголовком */
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.content-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+.auth-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+.password-hints {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    color: #777;
+    font-size: 14px;
+}
+
+.password-hints li {
+    margin-bottom: 5px;
+}
+
+.auth-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.auth-button:hover {
+    background-color: #333;
+}
+
+.login-link {
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
+.language-selector span {
+    margin-left: 10px;
+}
+
+.navbar-brand {
+    text-transform: uppercase;
+}
+
+.d-inline-block {
+    display: inline-block;
+    color: black;
+}
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}

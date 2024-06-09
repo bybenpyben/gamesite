@@ -1,0 +1,247 @@
+/* Стили для страницы новостей */
+.news-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0; /* Отступы сверху и снизу */
+    padding: 0 20px; /* Отступы слева и справа */
+    background-color: #f9f9f9; /* Светлый фон для выделения */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.image-container {
+    width: 70%; /* Занимает всю ширину родителя */
+    text-align: center;
+    margin-bottom: 20px; /* Отступ снизу */
+    position: relative; /* Добавляем позиционирование */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px; /* Добавляем отступ снизу, чтобы предотвратить перекрытие футера */
+    position: relative;
+}
+
+.text-container {
+    text-align: center;
+    padding: 20px 20px 0; /* Отступы слева и справа, но только сверху 20px */
+    position: relative; /* Изменено на относительное позиционирование */
+    bottom: 0;
+    width: 100%;
+}
+
+
+.text-container h1 {
+    margin-top: 0; /* Убираем верхний отступ */
+    margin-bottom: 20px; /* Добавляем нижний отступ */
+    font-size: 2.4rem; /* Увеличиваем размер шрифта */
+}
+
+.text-content {
+    margin-bottom: 20px; /* Отступ снизу */
+    font-size: 1.6rem; /* Размер шрифта */
+    line-height: 1.6; /* Межстрочный интервал */
+    background-color: #fff; /* Белый фон для текста */
+    padding: 15px; /* Внутренние отступы */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+}
+
+.pub-date {
+    font-size: 1.4rem; /* Размер шрифта */
+    color: #777; /* Светло-серый цвет */
+}
+
+/* Общие стили */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    outline: none;
+}
+
+html {
+    height: 101%;
+}
+
+body {
+    font-size: 62.5%;
+    line-height: 1;
+    font-family: Arial, Tahoma, Verdana, sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+strong {
+    font-weight: bold;
+}
+
+input {
+    outline: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
+.language-selector span {
+    margin-left: 10px;
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.news-item {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(30% - 20px);
+    margin: 10px 0;
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.news-item img {
+    width: 100%; /* Изменяем ширину изображения */
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.news-item h2 {
+    font-size: 1.6rem;
+    margin: 20px 0 10px;
+}
+
+.news-item p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.news-item .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ffc107;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.4rem;
+    border-radius: 5px;
+transition: background-color 0.3s ease;
+margin-top: auto;
+}
+
+.news-item .btn
+{
+background-color: #e0a800;
+}
+
+.news-item .btn::after {
+content: ' →';
+margin-left: 5px;
+}
+
+.news-item
+{
+transform: translateY(-5px);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buttons-container {
+display: flex;
+justify-content: center;
+gap: 20px;
+margin: 30px 0;
+}
+
+.buttons-container .btn {
+padding: 10px 20px;
+font-size: 1.4rem;
+border-radius: 5px;
+text-transform: uppercase;
+}
+
+.buttons-container .btn-danger {
+text-transform: uppercase;
+}
+

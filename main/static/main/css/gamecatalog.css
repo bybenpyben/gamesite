@@ -1,0 +1,437 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+header {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content_wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.catalog {
+    width: 65%;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Стили для элементов каталога */
+.product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавный переход для увеличения и тени */
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+.product-item .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0; /* Скрытие кнопки по умолчанию */
+    visibility: hidden; /* Скрытие кнопки по умолчанию */
+    transition: opacity 0.3s, visibility 0.3s; /* Плавный переход для кнопки */
+}
+
+/* Стиль при наведении на product-item */
+.product-item:hover {
+    transform: scale(1.05); /* Легкое увеличение */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+}
+
+/* Отображение кнопки при наведении на product-item */
+.product-item:hover .btn {
+    opacity: 1; /* Отображение кнопки */
+    visibility: visible; /* Отображение кнопки */
+}
+
+/* Дополнительные стили */
+.catalog .sort {
+    margin-bottom: 20px;
+}
+
+.catalog .sort select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    outline: none;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.catalog .sort select::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.catalog .sort {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Стили для aside */
+aside {
+    width: 30%;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+aside ul {
+    list-style: none; /* Убирает маркеры списка */
+    padding: 0;
+}
+
+aside ul li {
+    margin: 10px 0;
+}
+
+aside ul li input[type="checkbox"],
+aside ul li input[type="radio"] {
+    margin-right: 10px;
+}
+
+aside h2 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+aside .reset-filters {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.images img {
+    margin-left: 20px;
+    height: 300px;
+    margin-right: 30px;
+}
+
+.images {
+    display: flex;
+}
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.products {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для хлебных крошек */
+.breadcrumb {
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: white;
+    background-color: #dc3545;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Стили для раздела с деталями игры */
+.game-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.game-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-title h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.rating {
+    color: gold;
+    font-size: 1.5em;
+}
+
+.game-info {
+    display: flex;
+    margin-top: 20px;
+}
+
+.game-images {
+    flex: 1;
+}
+
+.game-images img {
+    max-width: 100%;
+    height: auto;
+}
+
+.game-description {
+    flex: 2;
+    margin-left: 20px;
+}
+
+/* Стили для раздела с отзывами */
+.reviews {
+    margin-top: 40px;
+}
+
+.review-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.review-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #999;
+}
+
+.review-form input::placeholder {
+    color: #ccc;
+}
+
+.review-form button {
+    background-color: #f8d7da;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #721c24;
+}
+
+.review-sort {
+    margin-bottom: 20px;
+}
+
+.review-sort label {
+    margin-right: 10px;
+}
+
+.review-sort select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.review {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.reviewer {
+    margin-right: 20px;
+}
+
+.reviewer-name {
+    font-weight: bold;
+}
+
+.reviewer-rating {
+    color: gold;
+}
+
+.review p {
+    flex: 1;
+}
+
+/* Стили для рекомендованных игр */
+.recommended-games {
+    margin-top: 40px;
+}
+
+.recommended-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recommended-game {
+    text-align: center;
+    position: relative;
+    width: 30%;
+}
+
+.recommended-game .image {
+    position: relative;
+}
+
+.recommended-game img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.recommended-game:hover img {
+    transform: scale(1.05);
+}
+
+.recommended-game p {
+    margin-top: 10px;
+}
+
+.recommended-game .details-btn {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.recommended-game:hover .details-btn {
+    display: block;
+}
+
+/* Кнопка "Отправить" */
+.review-form button {
+    background-color: #dc3545; /* Ярко красный фон */
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white; /* Белый текст */
+}
+
+/* Кнопка "Смотреть все" */
+.see-all-reviews {
+    background-color: #dc3545; /* Ярко красный фон */
+    color: white; /* Белый текст */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.see-all-reviews:hover {
+    background-color: #c82333; /* Темно-красный цвет при наведении */
+}

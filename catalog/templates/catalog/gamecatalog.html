@@ -1,0 +1,62 @@
+{% extends 'main/baze.html' %}
+
+{% block title %} Каталог игр{% endblock %}
+
+{% block content %}
+<div class="content_wrapper">
+    <aside>
+        <h2>По оценке</h2>
+        <ul>
+            <li><input type="checkbox" name="rating" id="5stars"><label for="5stars">★★★★★</label></li>
+            <li><input type="checkbox" name="rating" id="4stars"><label for="4stars">★★★★</label></li>
+            <li><input type="checkbox" name="rating" id="3stars"><label for="3stars">★★★</label></li>
+            <li><input type="checkbox" name="rating" id="2stars"><label for="2stars">★★</label></li>
+            <li><input type="checkbox" name="rating" id="1star"><label for="1star">★</label></li>
+        </ul>
+        <h2>Платформа</h2>
+        <ul>
+            <li><input type="checkbox" id="pc"><label for="pc">PC</label></li>
+            <li><input type="checkbox" id="ps4"><label for="ps4">PS4</label></li>
+            <li><input type="checkbox" id="xbox"><label for="xbox">Xbox One</label></li>
+            <li><input type="checkbox" id="switch"><label for="switch">Switch</label></li>
+            <li><input type="checkbox" id="android"><label for="android">Android</label></li>
+        </ul>
+        <h2>Жанр</h2>
+        <ul>
+            <li><input type="checkbox" id="adventure"><label for="adventure">Adventure</label></li>
+            <li><input type="checkbox" id="mmo"><label for="mmo">MMO</label></li>
+            <li><input type="checkbox" id="horror"><label for="horror">Horror</label></li>
+            <li><input type="checkbox" id="casual"><label for="casual">Casual Game</label></li>
+            <li><input type="checkbox" id="simulator"><label for="simulator">Simulator</label></li>
+        </ul>
+        <h2>Все даты</h2>
+        <ul>
+            <li><input type="checkbox" id="2024"><label for="2024">2024</label></li>
+            <li><input type="checkbox" id="2023"><label for="2023">2023</label></li>
+            <li><input type="checkbox" id="2022"><label for="2022">2022</label></li>
+            <li><input type="checkbox" id="2021"><label for="2021">2021</label></li>
+            <li><input type="checkbox" id="2001-2005"><label for="2001-2005">2001-2005</label></li>
+        </ul>
+        <button class="reset-filters">Сбросить фильтры</button>
+    </aside>
+    <section class="catalog">
+        <h1>Каталог товаров</h1>
+        <div class="sort">
+            <select>
+                <option>Сначала популярные ⬇️</option>
+                <option>Сначала новые ⬇️</option>
+            </select>
+        </div>
+        <div class="products">
+            {% for el in games %}
+            <div class="product-item">
+                <img src="{{ el.image.url }}" alt="{{ el.name }}">
+                <h3>{{ el.name }} {{ el.ocenka }}</h3>
+                <p>{{ el.platform }}</p>
+                <a href="{% url 'game-detail' el.id %}" class="btn btn-warning">Читать подробнее</a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}

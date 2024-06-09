@@ -1,0 +1,587 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  outline: none;
+}
+html { height: 101%; } /* всегда показывать скроллбар */
+body { font-size: 62.5%; line-height: 1; font-family: Arial, Tahoma, Verdana, sans-serif; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+strong { font-weight: bold; }
+
+input { outline: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+body {
+    font-family: Arial, sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
+.language-selector span {
+    margin-left: 10px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    margin-left: 300px;
+    background-color: #c6a0fa;
+    border-radius: 0px 0px 0px 350px;
+}
+
+.content {
+    height: 600px;
+}
+
+.content h1 {
+    font-size: 63px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-danger {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-style: oblique;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    margin: 40px 0px 0px -30px;
+}
+
+
+.images {
+    display: flex;
+}
+
+.images img {
+    margin-left: 20px;
+    height: 300px;
+    margin-right: 30px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    height: 30px;
+}
+
+.img1_index {
+    margin-top: 200px;
+}
+
+.navbar-brand {
+    text-transform: uppercase;
+}
+
+.h1_index {
+    margin-top: 100px;
+    font-family: 'Roboto', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: right;
+    margin-right: 100px;
+    margin-left: -226px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+.p_index {
+    font-style: oblique;
+    text-decoration: underline;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 80px;
+}
+
+.hero_about {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    margin-right: 1000px;
+    background-color: #c6a0fa;
+    border-radius: 0px 0px 350px 0px;
+}
+
+.content_about {
+    margin-right: -800px;
+    height: 600px;
+}
+
+.images_about {
+    margin-top: 200px;
+}
+
+.img_hearts_about {
+    margin-top: -700px;
+    margin-left: -175px;
+}
+
+.h1_content_about {
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 60px;
+}
+
+.p_content_about {
+    color: #FF0433;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 60px;
+}
+
+.hero_contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    margin-left: 300px;
+    background-color: #c6a0fa;
+    border-radius: 0px 0px 0px 350px;
+    margin-left: 700px;
+}
+
+.h1_contact {
+    margin-left: -500px;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+.p_contact1 {
+    margin-top: 40px;
+    margin-left: -500px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.p_contact2 {
+    font-size: 25px;
+    margin-left: -500px;
+    margin-top: -20px;
+    font-style: oblique;
+}
+
+.p_contact3 {
+    font-size: 25px;
+    margin-left: -500px;
+}
+
+.map_contact {
+    margin-right: 130px;
+    border-radius: 0px 350px 0px 350px;
+}
+
+.hero_games {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    margin-left: 300px;
+    background-color: #c6a0fa;
+    border-radius: 0px 0px 0px 350px;
+    margin-left: 700px;
+}
+
+.h1_games {
+    margin-left: -550px;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: black;
+}
+
+.p_games {
+    margin-left: -550px;
+    font-size: 25px;
+    color: black;
+}
+
+.btn-danger-games {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-style: oblique;
+    line-height: 30px;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+.btn-danger-games-list {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-style: oblique;
+    line-height: 30px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: -380px;
+    margin-top: -140px;
+}
+
+.h1_topgames {
+    text-transform: uppercase;
+}
+
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.game-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.img1_games {
+    max-width: 100%;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+}
+
+.rating {
+    color: gold;
+    font-size: 40px;
+}
+
+/* Стили для game-item */
+.game-list .game-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Стиль при наведении на game-item */
+.game-list .game-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ограничение размера изображений */
+.game-list .game-item img {
+    max-width: 100%;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Дополнительные стили для game-info */
+.game-list .game-item .game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-list .game-item .game-info h2 {
+    margin: 10px 0;
+}
+
+.game-list .game-item .game-info .rating {
+    margin: 10px 0;
+}
+
+.game-list .game-item .game-info .details-btn {
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Отображение кнопки при наведении на game-item */
+.game-list .game-item:hover .game-info .details-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.h1_topgames {
+    margin-left: 5%;
+    padding: 10px 10px 20px 10px;
+}
+
+.load-more-btn {
+    padding: 20px 30px;
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.btn-btn-danger {
+    padding: 20px 30px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-left: 2000px;
+}
+
+/* Стили для секции "Жанры Игр" */
+.game-genres {
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.game-genres h1 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.game-genres p {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.game-genres .button {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    margin-top: 20px;
+}
+
+.game-genres .button:hover {
+    background-color: #cc0000;
+}
+
+/* Стили для сетки жанров */
+.genres-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.genre {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.genre:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.genre .image {
+    width: 100%;
+}
+
+.genre .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.genre .text {
+    padding: 20px;
+    text-align: left;
+}
+
+.genre h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.genre p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.genre .button {
+    font-size: 1.4rem;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.genre .button:hover {
+    background-color: #cc0000;
+}
+
+/* Стили для секции "Последние проекты" */
+.latest-projects {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.latest-projects h2 {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.images-row, .texts-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.images-row .image, .texts-row .text {
+    width: 32%;
+}
+
+.images-row .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.texts-row .text {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.texts-row h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.texts-row p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.texts-row .button {
+    display: inline-block;
+    font-size: 1.4rem;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.texts-row .button:hover {
+    background-color: #cc0000;
+}

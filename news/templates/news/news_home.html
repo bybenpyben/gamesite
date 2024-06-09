@@ -1,0 +1,29 @@
+{% extends 'main/baze-news.html' %}
+
+{% block title %}Новости на сайте{% endblock %}
+
+{% block content %}
+<main role="main">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Новости</h1>
+        </div>
+    </section>
+
+    <div class="news-container">
+        {% for news in news_list %}
+        <div class="news-item">
+            <img src="{{ news.image.url }}" alt="{{ news.title }}">
+            <h2>{{ news.title }}</h2>
+            <p>{{ news.text }}</p>
+            <a href="{% url 'news-detail' news.id %}" class="btn">Читать подробнее</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="buttons-container">
+        <a href="#" class="btn btn-danger">Больше новостей</a>
+        <a href="#" class="btn btn-primary" id="scroll-to-top">Вверх</a>
+    </div>
+</main>
+{% endblock %}

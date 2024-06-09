@@ -1,0 +1,91 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Топ игры{% endblock %}
+
+{% block content %}
+<section class="hero_topgames">
+    <div class="content_topgames">
+        <h1 class="h1_topgames">Топ игры по<br>версиям пользователей</h1>
+    </div>
+</section>
+     {% load static %}
+<div class="game-list">
+    <div class="game-item">
+        <img class="img1_games" src="{% static 'main/img/CS.png' %}" alt="Counter-Strike 2">
+        <div class="game-info">
+            <h2>Counter-Strike 2</h2>
+            <div class="rating">★★★★★</div>
+            <button class="details-btn">Подробнее →</button>
+        </div>
+    </div>
+    <div class="game-item">
+          <img class="img1_games" src="{% static 'main/img/AtomicHeart.png' %}" alt="Atomic Heart">
+            <div class="game-info">
+            <h2>Atomic Heart</h2>
+            <div class="rating">★★★★★</div>
+            <button class="details-btn">Подробнее →</button>
+        </div>
+    </div>
+    <div class="game-item">
+                  <img class="img1_games" src="{% static 'main/img/Minecraft.png' %}" alt="Minecraft">
+        <div class="game-info">
+            <h2>Minecraft</h2>
+            <div class="rating">★★★★★</div>
+            <button class="details-btn">Подробнее →</button>
+        </div>
+    </div>
+    <div class="game-item">
+                  <img class="img1_games" src="{% static 'main/img/Dota2.png' %}" alt="Dota 2">
+                <div class="game-info">
+            <h2>Dota 2</h2>
+            <div class="rating">★★★★★</div>
+            <button class="details-btn">Подробнее →</button>
+        </div>
+    </div>
+    <div class="game-item">
+                  <img class="img1_games" src="{% static 'main/img/AtomicHeart.png' %}" alt="Atomic Heart">
+        <div class="game-info">
+            <h2>Atomic Heart</h2>
+            <div class="rating">★★★★★</div>
+            <button class="details-btn">Подробнее →</button>
+        </div>
+    </div>
+    <div class="game-item">
+                  <img class="img1_games" src="{% static 'main/img/Valorant.png' %}" alt="Valorant">
+        <div class="game-info">
+            <h2>Valorant</h2>
+            <div class="rating">★★★★★</div>
+            <button class="details-btn">Подробнее →</button>
+        </div>
+    </div>
+    <div class="game-item">
+                  <img class="img1_games" src="{% static 'main/img/WOF.png' %}" alt="Мир Танков">
+        <div class="game-info">
+            <h2>Мир Танков</h2>
+            <div class="rating">★★★★★</div>
+            <button class="details-btn">Подробнее →</button>
+        </div>
+    </div>
+    <div class="game-item">
+                  <img class="img1_games" src="{% static 'main/img/Nier.png' %}" alt="NieR Replicant">
+        <div class="game-info">
+            <h2>NieR Replicant</h2>
+            <div class="rating">★★★★★</div>
+            <button class="details-btn">Подробнее →</button>
+        </div>
+    </div>
+    <div class="game-item">
+                  <img class="img1_games" src="{% static 'main/img/BG.png' %}" alt="Baldur's Gate III">
+        <div class="game-info">
+            <h2>Baldur's Gate III</h2>
+            <div class="rating">★★★★★</div>
+            <button class="details-btn">Подробнее →</button>
+        </div>
+    </div>
+</div>
+<button class="load-more-btn">Больше игр ↓</button>
+</section>
+
+        <a href="#" class="btn-btn-danger">Вверх ↑</a>
+{% endblock %}
+

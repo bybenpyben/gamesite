@@ -1,0 +1,87 @@
+{% extends 'main/baze.html' %}
+
+{% block title %}Новости на сайте{% endblock %}
+
+{% block content %}
+
+<div class="products">
+    <div class="breadcrumb">
+        <a href="/catalog" class="btn-danger">Каталог игр</a>
+    </div>
+    <section class="game-details">
+        <div class="game-title">
+            <h1>{{ game.name }}</h1>
+            <div class="rating">{{ game.ocenka }}</div>
+        </div>
+        <div class="game-info">
+            <div class="game-images">
+                <img src="{{ game.image.url }}" alt="{{ game.name }}">
+            </div>
+            <div class="game-description">
+                <p>{{ game.text }}</p>
+                <p>Требования</p>
+                <ul>
+                    <li>Операционная система: Windows XP/Windows 7/Windows Vista</li>
+                    <li>Процессор: Intel Pentium 4 2.4 GHz</li>
+                    <li>Видеокарта: NVIDIA GeForce 6600</li>
+                    <li>Оперативная память (Гб): 512.0</li>
+                </ul>
+            </div>
+        </div>
+        <div class="reviews">
+            <h2>Отзывы</h2>
+            <div class="review-form">
+                <input type="text" placeholder="Оставьте ваш отзыв">
+                <button>Отправить</button>
+            </div>
+            <div class="review-sort">
+                <label for="sort-reviews">Сортировать:</label>
+                <select id="sort-reviews">
+                    <option value="newest">Сначала новые</option>
+                    <option value="oldest">Сначала старые</option>
+                </select>
+            </div>
+            <div class="review">
+                <div class="reviewer">
+                    <div class="reviewer-name">nickname</div>
+                    <div class="reviewer-rating">★★★★★</div>
+                </div>
+                <p>Первый мой экземпляр...</p>
+            </div>
+            <div class="review">
+                <div class="reviewer">
+                    <div class="reviewer-name">nickname</div>
+                    <div class="reviewer-rating">★★★★</div>
+                </div>
+                <p>Первый мой экземпляр...</p>
+            </div>
+            <button class="see-all-reviews">Смотреть все</button>
+        </div>
+        <div class="recommended-games">
+            <h2>Также рекомендуем похожие игры:</h2>
+            <div class="recommended-list">
+                <div class="recommended-game">
+                     {% load static %}
+                    <div class="image">
+                        <img class="img1_index" src="{% static 'main/img/rysu.png' %}" alt="Game 1">
+                    </div>
+                    <p>РУСЫ ПРОТИВ ЯЩЕРОВ</p>
+                </div>
+                <div class="recommended-game">
+                    <div class="image">
+                        <img class="img1_index" src="{% static 'main/img/rysu.png' %}" alt="Game 1">
+                    </div>
+                    <p>РУСЫ ПРОТИВ ЯЩЕРОВ</p>
+                </div>
+                <div class="recommended-game">
+                    <div class="image">
+                        <img class="img1_index" src="{% static 'main/img/rysu.png' %}" alt="Game 1">
+                    </div>
+                    <p>РУСЫ ПРОТИВ ЯЩЕРОВ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

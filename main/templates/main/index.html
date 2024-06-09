@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Главная страница {% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="content">
+        <h1 class="h1_index">интерактивные рейтинги<br>и обзоры игр</h1>
+        <p class="p_index">Платформа, где игроки могут оценивать<br>игры, оставлять отзывы, комментарии и<br>создавать собственные рейтинги,<br>основанные на их опыте</p>
+        <a href="{% url 'about' %}" class="btn-danger"><br>узнать<br>подробнее<br>⟹<br><br></a>
+    </div>
+
+    <div class="images">
+        {% load static %}
+        <img class="img1_index" src="{% static 'main/img/ghost1.png' %}" alt="Ghost 1">
+        <img class="img2_index" src="{% static 'main/img/ghost2.png' %}" alt="Ghost 2">
+        </div>
+
+</section>
+{% endblock %}
+

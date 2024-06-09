@@ -1,0 +1,76 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Регистрация{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/register.css' %}">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'main/img/logo.svg' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+            Game Rating
+        </a>
+    </nav>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'about' %}">О Компании</a></li>
+            <li><a href="{% url 'games' %}">Игры</a></li>
+            <li><a href="{% url 'articles_list' %}">Новости</a></li>
+            <li><a href="{% url 'contact' %}">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <div class="language-selector">
+        <span>RU</span>
+        <span><a href="#"><img src="{% static 'main/img/search.png' %}" alt="search-photo"></a></span>
+        <span><a href="#"><img src="{% static 'main/img/user.png' %}" alt="User-photo"></a> </span>
+    </div>
+</header>
+
+<div class="auth-background">
+  <div class="page-container">
+    <div class="content-wrap">
+      <div class="auth-container">
+        <div class="auth-box">
+          <h2 class="auth-title">Регистрация</h2>
+          <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="id_username">Имя пользователя:</label>
+              <input type="text" id="id_username" name="username" required placeholder="Введите имя пользователя">
+            </div>
+            <div class="form-group">
+              <label for="id_email">E-mail:</label>
+              <input type="email" id="id_email" name="email" required placeholder="Введите email">
+            </div>
+            <div class="form-group">
+              <label for="id_password1">Пароль:</label>
+              <input type="password" id="id_password1" name="password1" required placeholder="Введите пароль">
+              <ul class="password-hints">
+                <li>Пароль не должен быть слишком похож на другую вашу личную информацию.</li>
+                <li>Ваш пароль должен содержать как минимум 8 символов.</li>
+                <li>Пароль не должен быть слишком простым и распространенным.</li>
+                <li>Пароль не может состоять только из цифр.</li>
+              </ul>
+            </div>
+            <div class="form-group">
+              <label for="id_password2">Подтверждение пароля:</label>
+              <input type="password" id="id_password2" name="password2" required placeholder="Повторите пароль">
+            </div>
+            <button type="submit" class="auth-button">Зарегистрироваться</button>
+            <p class="login-link">Уже есть аккаунт? <a href="#">Войти</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

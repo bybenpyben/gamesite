@@ -1,0 +1,109 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Жанры игр{% endblock %}
+
+{% block content %}
+<section class="game-genres">
+    {% load static %}
+    <h1>Жанры Игр</h1>
+    <p>Стань дизайнером интерьеров!</p>
+    <p>Проходите уровни игр, создавайте собственные дизайны и интерьеры, следите за историей и знакомьтесь с персонажами.</p>
+
+    <div class="genres-grid">
+        <div class="genre">
+            <div class="image">
+                <img class="img1_index" src="{% static 'main/img/janr-horror.png' %}" alt="Horror game">
+            </div>
+            <div class="text">
+                <h2>Horror</h2>
+                <p>Цель игр хоррора - вызвать чувство страха и напряжения у игрока через атмосферу, ужасающие сюжеты и элементы неожиданности.</p>
+                <a href="#" class="button">Подробнее</a>
+            </div>
+        </div>
+        <div class="genre">
+            <div class="image">
+                <img class="img1_index" src="{% static 'main/img/janr-survival.png' %}" alt="Survival Game">
+            </div>
+            <div class="text">
+                <h2>Survival</h2>
+                <p>"Выживание" - жанр игр, где игрокам необходимо выжить в враждебной или опасной среде, собирая ресурсы, строя укрытия и борясь с угрозами.</p>
+                <a href="#" class="button">Подробнее</a>
+            </div>
+        </div>
+        <div class="genre">
+            <div class="image">
+                <img class="img1_index" src="{% static 'main/img/janr-vn.png' %}" alt="Visual Novel Game">
+            </div>
+            <div class="text">
+                <h2>Visual Novel</h2>
+                <p>"Визуальная новелла" - это жанр игр, где игроки взаимодействуют с персонажами и сюжетом через текст и изображения, принимая решения, влияющие на развитие истории.</p>
+                <a href="#" class="button">Подробнее</a>
+            </div>
+        </div>
+        <div class="genre">
+            <div class="image">
+                <img class="img1_index" src="{% static 'main/img/RPG.jpg' %}" alt="RPG Game">
+            </div>
+            <div class="text">
+                <h2>RPG</h2>
+                <p>"Ролевые игры" - жанр, где игроки берут на себя роли персонажей в вымышленном мире, развивая их навыки и следуя сюжету.</p>
+                <a href="#" class="button">Подробнее</a>
+            </div>
+        </div>
+        <div class="genre">
+            <div class="image">
+                <img class="img1_index" src="{% static 'main/img/strategy.jpg' %}" alt="Strategy Game">
+            </div>
+            <div class="text">
+                <h2>Strategy</h2>
+                <p>"Стратегии" - жанр игр, где игрокам нужно планировать и управлять ресурсами для достижения определенных целей.</p>
+                <a href="#" class="button">Подробнее</a>
+            </div>
+        </div>
+        <div class="genre">
+            <div class="image">
+                <img class="img1_index" src="{% static 'main/img/shooter.jpg' %}" alt="Shooter Game">
+            </div>
+            <div class="text">
+                <h2>Shooter</h2>
+                <p>"Шутеры" - жанр игр, где игроки сражаются с врагами с использованием огнестрельного оружия, часто в быстро меняющейся обстановке.</p>
+                <a href="#" class="button">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="latest-projects">
+    <h2>Последние проекты</h2>
+    <div class="projects-grid">
+        <div class="images-row">
+            <div class="image">
+                <img class="img1_index" src="{% static 'main/img/rysu.png' %}" alt="Game 1">
+            </div>
+            <div class="image">
+                <img class="img1_index" src="{% static 'main/img/grimms.png' %}" alt="Game 2">
+            </div>
+            <div class="image">
+                <img class="img1_index" src="{% static 'main/img/rust.png' %}" alt="Game 3">
+            </div>
+        </div>
+        <div class="texts-row">
+            <div class="text">
+                <h3>РУСЫ ПРОТИВ ЯЩЕРОВ</h3>
+                <p>Великие подвиги Древних Русов в войне с ящерами. Погрузитесь в мир Гипербореи и одолейте полчища Ящеров и других врагов.</p>
+                <a href="#" class="button">Подробнее</a>
+            </div>
+            <div class="text">
+                <h3>GRIMM'S HOLLOW</h3>
+                <p>Лаванда, проснувшись этим утром, не ожидала, что окажется в окружении странных существ в масках в форме черепов.</p>
+                <a href="#" class="button">Подробнее</a>
+            </div>
+            <div class="text">
+                <h3>RUST</h3>
+                <p>Единственная цель в Rust - выжить. Выживайте в дикой природе, строите укрытия и боритесь с врагами.</p>
+                <a href="#" class="button">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

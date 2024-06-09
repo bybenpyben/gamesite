@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Игры {% endblock %}
+
+{% block content %}
+<section class="hero_games">
+    <div class="content_games">
+        <h1 class="h1_games">ИГРЫ</h1>
+        <p class="p_games">Игры расслабляют и снимают стресс.<br>У дофамина имеются и другие эффекты<br>— вроде как побочные, но не менее<br>полезные, чем основные. Например,<br>под его влиянием человеку легче<br>переключаться между задачами и<br>менять виды деятельности.<br>
+            <a href="/topgames" class="btn-danger-games"><br>рейтинг<br>игр<br>⟹<br><br></a></p>
+        <br>
+        <a href="/catalog/" class="btn-danger-games-list"><br>список<br>игр<br>⟹<br><br></a></p>
+    </div>
+    <div class="images_games">
+        {% load static %}
+        <img class="img1_games" src="{% static 'main/img/personag.png' %}" alt="personag">
+        <img class="img2_games" src="{% static 'main/img/cat.svg' %}" alt="cat">
+    </div>
+
+</section>
+{% endblock %}

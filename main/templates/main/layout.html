@@ -1,0 +1,90 @@
+{% load static %}
+
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} title {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'main/img/logo.svg' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+            Game Rating
+        </a>
+    </nav>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'about' %}">О Компании</a></li>
+            <li><a href="{% url 'games' %}">Игры</a></li>
+            <li><a href="{% url 'articles_list' %}">Новости</a></li>
+            <li><a href="{% url 'contact' %}">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <div class="language-selector">
+        <span>RU</span>
+        <span><a href="#"><img src="{% static 'main/img/search.png' %}" alt="search-photo"></a></span>
+        <span><a href="#"><img src="{% static 'main/img/user.png' %}" alt="User-photo"></a> </span>
+    </div>
+</header>
+<main>
+    {% block content %}
+
+    {% endblock %}
+</main>
+
+<div class="container">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+        <div class="col mb-3">
+            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                <img src="{% static 'main/img/logo.svg' %}" width="30" height="30" class="d-inline-block align-top"
+                     alt="">
+            </a>
+            <p class="text-muted">Game Raiting</p>
+        </div>
+
+        <div class="col mb-3">
+
+        </div>
+
+        <div class="col mb-3">
+            <h5>Главная</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="{% url 'home' %}" class="nav-link p-0 text-muted">Главная
+                    страница</a></li>
+                <li class="nav-item mb-2"><a href="{% url 'about' %}" class="nav-link p-0 text-muted">О компании</a>
+                </li>
+                <li class="nav-item mb-2"><a href="{% url 'games' %}" class="nav-link p-0 text-muted">Игры</a></li>
+                <li class="nav-item mb-2"><a href="{% url 'articles_list' %}"
+                                             class="nav-link p-0 text-muted">Новости</a></li>
+                <li class="nav-item mb-2"><a href="{% url 'contact' %}" class="nav-link p-0 text-muted">Контакты</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col mb-3">
+            <h5>Игры</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="/topgames" class="nav-link p-0 text-muted">Топ игры</a></li>
+                <li class="nav-item mb-2"><a href="/catalog" class="nav-link p-0 text-muted">Каталог игр</a></li>
+                <li class="nav-item mb-2"><a href="/catalog/janr" class="nav-link p-0 text-muted">Жанры игр</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+
+            </ul>
+        </div>
+
+    </footer>
+</div>
+
+</body>
+</html>

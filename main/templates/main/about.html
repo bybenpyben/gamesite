@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} О компании{% endblock %}
+
+{% block content %}
+<section class="hero_about">
+
+        <div class="images_about">
+        {% load static %}
+        <img class="img_about" src="{% static 'main/img/frog.png' %}" alt="frog">
+            <img class="img_hearts_about" src="{% static 'main/img/hearts.png' %}" alt="hearts">
+        </div>
+
+    <div class="content_about">
+        <h1 class="h1_content_about">О компании</h1>
+        <p class="p_content_about">Главная наша миссия - предоставление независимой<br>и объективной информации о видеоиграх. Мы понимаем,<br>что для геймеров крайне важно получать достоверную информацию<br>о продуктах, которые их интересуют. Наш сайт является местом, где<br>игроки могут поделиться своими мнениями и оценками, а также<br>узнать о новинках и трендах в игровой индустрии.</p>
+    </div>
+
+</section>
+
+{% endblock %}

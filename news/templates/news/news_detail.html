@@ -1,0 +1,20 @@
+{% extends 'main/baze-news.html' %}
+
+<!--{% block title %}Новости на сайте{% endblock %}-->
+
+{% block content %}
+    <div class="news-layout">
+        <div class="image-container">
+            <img src="{{ news.image.url }}" alt="{{ news.title }}">
+        </div>
+        <div class="text-container">
+            <h1>{{ news.title }}</h1>
+            <div class="text-content">
+                <p>{{ news.text }}</p>
+            </div>
+            <div class="pub-date">
+                <p>{{ news.pub_date }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
